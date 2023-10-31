@@ -44,14 +44,14 @@
         L.geoJSON(json, {
             onEachFeature: function (feature, layer) {
                 // すべての情報をポップアップに表示
-                var popupContent = "<strong>学校情報</strong><br>" +
+                var pop = "<strong>学校情報</strong><br>" +
                     "<strong>学校名:</strong> " + feature.properties.P29_004 + "<br>" +
                     "<strong>住所:</strong> " + feature.properties.P29_005 + "<br>" +
                     "<strong>市町村コード:</strong> " + feature.properties.P29_001 + "<br>" +
                     "<strong>学校コード:</strong> " + feature.properties.P29_002 + "<br>" +
                     "<strong>学校分類コード:</strong> " + feature.properties.P29_003;
                 
-                layer.bindPopup(popupContent);
+                layer.bindPopup(pop);
             },
         }).addTo(map);
                 });
