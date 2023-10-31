@@ -44,11 +44,6 @@
                     L.geoJSON(json)
                         .bindPopup((layer) => layer.feature.properties.P29_005) // ポップアップで学校名を表示
                         .addTo(map);
-                .then((json) => {
-                    // GeoJSONレイヤーを作成
-                    L.geoJSON(json)
-                        .bindPopup((layer) => layer.feature.properties.P29_004) // ポップアップで学校名を表示
-                        .addTo(map);
                 });
         </script>
     </body>
