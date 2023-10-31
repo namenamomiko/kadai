@@ -43,7 +43,6 @@
                        // GeoJSONレイヤーを作成
         L.geoJSON(json, {
             onEachFeature: function (feature, layer) {
-                // すべての情報をポップアップに表示
                 var pop = "<strong>学校情報</strong><br>" +
                     "<strong>学校名:</strong> " + feature.properties.P29_004 + "<br>" +
                     "<strong>住所:</strong> " + feature.properties.P29_005 + "<br>" +
