@@ -41,7 +41,7 @@
                 .then((res) => res.json())
                 .then((json) => {
                     // GeoJSONレイヤーを作成
-                    L.geoJSON(json,{
+                    L.geoJSON(json)
                         .bindPopup((layer) => layer.feature.properties.P29_05)
                         .addTo(map);
                 });
