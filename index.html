@@ -50,7 +50,8 @@
                     "<strong>市町村コード:</strong> " + feature.properties.P29_001 + "<br>" +
                     "<strong>学校コード:</strong> " + feature.properties.P29_002 + "<br>" +
                     "<strong>学校分類コード:</strong> " + feature.properties.P29_003 + "<br>" +
-                    "<strong>緯度経度:</strong> " + feature.coordinates + "<br>" +
+                    "<strong>緯度経度:</strong> " + feature.coordinates;
+                
                 layer.bindPopup(popupContent);
             },
         }).addTo(map);
