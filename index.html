@@ -42,9 +42,15 @@
                 .then((json) => {
                     // GeoJSONレイヤーを作成
                    L.geoJSON(json)
-                        .bindPopup((layer) => layer.feature.properties.P29_005) // ポップアップで学校名を表示
-                        .addTo(map);
-                });
+                          pointToLayer: function(feature, latlng) {
+                              return L.marker(latlng, {icon: customIcon});
+                          },
+                    onEachFeature: function(feature, layer){
+                        let name = feature.properties.P29_002;
+                        layer.bindPopup(name);
+                    }
+                }).addTo(map);
+            });
         </script>
     </body>
 </html>
