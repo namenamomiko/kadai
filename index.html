@@ -42,9 +42,9 @@
                 .then((json) => {
                     // GeoJSONレイヤーを作成
                     L.geoJSON(json,{
-                     let address = feature.properties.P29_005;
-                     let school = feature.properties.P29_004;
-                     layer.bindPopup(address,school);
+                        let address = feature.properties.P29_005;
+                        let school = feature.properties.P29_004;
+                        layer.bindPopup(address,school);
                 }
                     .addTo(map);
                 });
