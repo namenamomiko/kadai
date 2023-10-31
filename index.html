@@ -41,15 +41,17 @@
                 .then((res) => res.json())
                 .then((json) => {
                        // GeoJSONレイヤーを作成
-                    L.geoJSON(json, {
+        L.geoJSON(json, {
             onEachFeature: function (feature, layer) {
-                // ポップアップに学校名と住所を表示
-                var popupContent = document.createElement('div');
-                popupContent.innerHTML = '<strong>学校名:</strong> ' + feature.properties.P29_004 + '<br>' +
-                                        '<strong>住所:</strong> ' + feature.properties.P29_005 + '<br>' +
-                                        '<strong>P29_001:</strong> ' + feature.properties.P29_001 + '<br>' +
-                                        '<strong>P29_002:</strong> ' + feature.properties.P29_002 + '<br>' +
-                                        '<strong>P29_003:</strong> ' + feature.properties.P29_003;
+                // すべての情報をポップアップに表示
+                var popupContent = "<strong>学校情報</strong><br>" +
+                    "<strong>学校名:</strong> " + feature.properties.P29_004 + "<br>" +
+                    "<strong>住所:</strong> " + feature.properties.P29_005 + "<br>" +
+                    "<strong>P29_001:</strong> " + feature.properties.P29_001 + "<br>" +
+                    "<strong>P29_002:</strong> " + feature.properties.P29_002 + "<br>" +
+                    "<strong>P29_003:</strong> " + feature.properties.P29_003 + "<br>" +
+                    "<strong>P29_006:</strong> " + feature.properties.P29_006 + "<br>" +
+                    "<strong>P29_007:</strong> " + feature.properties.P29_007;
                 
                 layer.bindPopup(popupContent);
             },
